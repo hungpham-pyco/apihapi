@@ -1,0 +1,37 @@
+{
+    "rules": {
+        "no-trailing-spaces": ["error", { "skipBlankLines": true }],
+        "strict": 0,
+        "new-cap": [2, {"capIsNew": false, "newIsCap": true}],
+        "global-require": 0,
+        "no-confusing-arrow": 0,
+        "no-console": 0,
+        "comma-dangle": [2, "never"],
+        "no-param-reassign": 0,
+        "valid-jsdoc": [1, {
+        "prefer": {
+            "return": "returns"
+        },
+        "preferType": {
+            "string": "String",
+            "number": "Number",
+            "boolean": "Boolean",
+            "function": "Function",
+            "object": "Object",
+            "array": "Array",
+            "map": "Map",
+            "mixed": "Mixed",
+            "any": "Any",
+            "promise": "Promise",
+            "error": "Error"
+        },
+        "requireReturn": false
+        }]
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true
+    },
+    "extends": "eslint:recommended"
+}
