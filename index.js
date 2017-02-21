@@ -17,7 +17,6 @@ const HOST = process.env.HOST || 'localhost';
 
 const server = new Hapi.Server();
 server.connection({
-    host: HOST,
     port: PORT
 });
 
@@ -47,6 +46,7 @@ server.register([
                 }
             },
             handler: function(request, reply) {
+                console.log(request);
                 reply(null, fs.createReadStream('./public/favicon.png')).code(200).type('image/x-icon');
             }
         });
