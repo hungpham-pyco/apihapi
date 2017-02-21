@@ -1,5 +1,6 @@
 'use strict'
 require('dotenv').config();
+const fs = require('fs');
 const Hapi = require('hapi')
 const Inert = require('inert')
 const Vision = require('vision')
@@ -35,6 +36,20 @@ server.register([
         options: options
     }], err => {
         if (err) throw err;
+
+        server.route({
+            method: 'GET',
+            path: '/favicon.ico',
+            config: {
+                auth: false,
+                cache: {
+                    expiresIn: 1000*60*60*24*21
+                }
+            },
+            handler: function(request, reply) {
+                reply(null, fs.createReadStream('./public/favicon.png')).code(200).type('image/x-icon');
+            }
+        });
 
         server.route({
             method: 'GET',
