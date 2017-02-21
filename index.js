@@ -17,7 +17,8 @@ const HOST = process.env.HOST || 'localhost';
 
 const server = new Hapi.Server();
 server.connection({
-    port: PORT
+    port: PORT,
+    host: HOST
 });
 
 let options = {
@@ -55,6 +56,7 @@ server.register([
             method: 'GET',
             path: '/',
             handler: (request, reply) => {
+                console.log(request);
                 server.log('error', 'Oh no!');
                 server.log('info', 'replying');
                 reply('hello hapi');
@@ -83,14 +85,7 @@ server.register([
                 },
                 description: 'Get task',
                 notes: 'Returns a task item by the id passed in the path',
-                tags: ['api'], // ADD THIS TAG
-                validate: {
-                    params: {
-                        id: Joi.number()
-                            .required()
-                            .description('the id for the task item')
-                    }
-                }
+                tags: ['api']
             }
         });
 
