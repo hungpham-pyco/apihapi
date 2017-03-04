@@ -18,7 +18,6 @@ TaskValidate.prototype = (function () {
         },
         insert: {
             payload: {
-                    taskId: Joi.string().max(255),
                     effort: Joi.number().integer(),
                     description: Joi.string().max(255)
                 }

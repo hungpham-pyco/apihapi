@@ -1,4 +1,3 @@
-const Joi = require('joi');
 var Mongoose = require('mongoose');
 const Schema = Mongoose.Schema;
 
