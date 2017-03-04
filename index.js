@@ -22,8 +22,7 @@ const MONGOURL = process.env.MONGODB_URI || 'mongodb://localhost:27017';
 
 const server = new Hapi.Server();
 server.connection({
-    port: PORT,
-    host: HOST
+    port: PORT
 });
 
 let options = {
