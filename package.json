@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "nodemon index.js",
-    "dev": "nodemon index2.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -25,6 +25,7 @@
     "inert": "^4.1.0",
     "mongoose": "^4.8.4",
     "node-uuid": "^1.4.7",
+    "nodemon": "^1.11.0",
     "vision": "^4.1.1"
   },
   "devDependencies": {
