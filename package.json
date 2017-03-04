@@ -21,6 +21,7 @@
     "good": "^7.1.0",
     "good-console": "^6.4.0",
     "hapi": "~16.1.0",
+    "hapi-mongoose": "^1.0.1",
     "hapi-swagger": "^7.6.0",
     "inert": "^4.1.0",
     "mongoose": "^4.8.4",
