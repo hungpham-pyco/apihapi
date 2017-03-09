@@ -69,9 +69,6 @@ server.register([
             server.route(routes[route]);
         }
 
-        // server.route(routes[0]);
-        // server.route(routes[1]);
-
         server.start(() => console.log(`Started at: ${server.info.uri}`));
 
 });

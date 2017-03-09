@@ -2,7 +2,7 @@
 
 const Joi = require('joi');
 
-const models = require('../models');
+const models = require('../models/task');
 
 function TaskValidate() { };
 TaskValidate.prototype = (function () {
@@ -10,17 +10,17 @@ TaskValidate.prototype = (function () {
     return {
         findByID: {
             params: {
-                    taskId: Joi.string().max(255)
-                }
+                taskId: Joi.string().max(255)
+            }
         },
         find: {
 
         },
         insert: {
             payload: {
-                    effort: Joi.number().integer(),
-                    description: Joi.string().max(255)
-                }
+                effort: Joi.number().integer(),
+                description: Joi.string().max(255)
+            }
         },
         update: (function update() {
             return {
