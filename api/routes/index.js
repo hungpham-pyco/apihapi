@@ -3,7 +3,17 @@
 const tasks = require('./task');
 const users = require('./user');
 
-const routes = [];
+const routes = [{
+    method: 'GET',
+    path: '/',
+    config: {
+        handler: function (request, reply) {
+            return reply.redirect('/documentation');
+        },
+        description: 'Root URL',
+        notes: 'Redirect to Documentation page'
+    }
+}];
 
 for (var task in tasks) {
     routes.push(tasks[task]);
